@@ -175,11 +175,10 @@ h1 {
 
 /* Vote panel */
 .vote-panel {
-  position: sticky; bottom: 0; margin-top: 32px;
-  background: var(--card); border-radius: 12px 12px 0 0;
-  box-shadow: 0 -8px 24px rgba(0, 52, 107, 0.10);
-  padding: 20px 24px calc(20px + env(safe-area-inset-bottom, 0px));
-  border-top: 1px solid var(--border);
+  margin-top: 32px;
+  background: var(--card); border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
 }
 .vote-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .field-wide { grid-column: 1 / -1; }
@@ -251,7 +250,6 @@ td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align:
   .option-head { flex-wrap: wrap; padding: 16px 18px; }
   .option-body, .option-small .option-note { padding-left: 18px; padding-right: 18px; }
   .vote-fields { grid-template-columns: 1fr; }
-  .vote-panel { position: static; border-radius: 12px; }
   .site-header .app-name { display: none; }
   .site-header .divider { display: none; }
 }
