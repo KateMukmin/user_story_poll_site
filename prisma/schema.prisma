@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vote {
+  id        Int      @id @default(autoincrement())
+  voterKey  String   @unique
+  firstName String
+  lastName  String
+  option    String
+  createdAt DateTime @default(now())
+}
